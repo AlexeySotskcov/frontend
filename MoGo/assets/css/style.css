@@ -686,3 +686,13 @@ hr {
     color: #fff;
     background-color: #f38181;
 }
+
+/* logos */
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos__item {
+    margin: auto;
+}
