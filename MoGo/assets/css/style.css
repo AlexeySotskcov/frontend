@@ -691,8 +691,5 @@ hr {
 .logos {
     display: flex;
     justify-content: space-between;
-}
-
-.logos__item {
-    margin: auto;
+    align-items: center;
 }
