@@ -251,6 +251,12 @@ h1, h2, h3, h4, h5, h6 {
     /* margin-bottom: 40px; */
 }
 
+.section--map {
+    background: url("../images/map/map-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+}
+
 .section__header {
     max-width: 950px;
     width: 100%;
@@ -914,4 +920,35 @@ hr {
 
 .blog-stat__item i {
     color: #95e1d3;
+}
+
+/* map */
+.map {
+    text-align: center;
+}
+
+.map__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #f38181;
+}
+
+.map__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.map__title a:hover {
+    text-decoration: underline;
+}
+
+.map__title:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 15px auto 0;
+
+    max-width: 60px;
+    background-color: #f38181;
 }
