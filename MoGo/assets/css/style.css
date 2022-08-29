@@ -579,7 +579,7 @@ hr {
 }
 
 .reviews__item {
-    padding-left: 210px;
+    padding-left: 255px;
     position: relative;
 }
 
@@ -588,9 +588,15 @@ hr {
     top: 0;
     left: 0;
     z-index: 1;
-
     border: 2px solid #95e1d3;
+}
 
+.reviews__photo--circled {
+    border-radius: 50%;
+    top: 50%;
+    z-index: 1;
+
+    transform: translate3d(0, -50%, 0);
 }
 
 .reviews__text {
