@@ -13,15 +13,22 @@ body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
+
 /* container */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1230px;
     /* move to center */
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* intro */
@@ -478,28 +485,23 @@ hr {
 }
 
 /* accordion */
-.accordion {
-
-}
+.accordion {}
 
 .accordion__item {
     border: 1px solid #e5e5e5;
     margin-bottom: 15px;
 }
 
-.accordion__item.active
-.accordion__content {
+.accordion__item.active .accordion__content {
     display: block;
 }
 
-.accordion__item.active
-.accordion__header:after {
+.accordion__item.active .accordion__header:after {
     transform: translateY(-50%) rotate(-45deg);
     margin-top: 5px;
 }
 
-.accordion__item.active
-.accordion__header {
+.accordion__item.active .accordion__header {
     border-bottom-color: #e5e5e5;
 }
 
@@ -520,7 +522,7 @@ hr {
     border-right: 2px solid #ccc;
     position: absolute;
 
-    top:50%;
+    top: 50%;
     right: 20px;
     z-index: 1;
 
@@ -630,7 +632,7 @@ hr {
     font-weight: 700;
 }
 
-.reviews__author:before{
+.reviews__author:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -1005,7 +1007,7 @@ hr {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.footer__social-header b{
+.footer__social-header b {
     font-size: 18px;
 }
 
@@ -1179,4 +1181,68 @@ hr {
 
 .copyright span {
     color: #f38181;
+}
+
+@media (max-width: 1230px) {
+
+    /* intro */
+    .intro__title {
+        font-size: 100px;
+    }
+
+    .intro__suptitle {
+        font-size: 64px;
+    }
+
+
+}
+
+@media (max-width: 990px) {
+
+    /* intro */
+    .intro__title {
+        font-size: 80px;
+    }
+
+    .intro__suptitle {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* intro */
+    .intro__title {
+        font-size: 70px;
+    }
+
+    .intro__suptitle {
+        font-size: 40px;
+    }
+
+    /* navigation */
+    .nav {
+        display: none;
+    }
+
+    /* slider */
+    .slider__text {
+        display: none;
+    }
+
+    .slider__item active:before {
+        width: 25%;
+    }
+}
+
+@media (max-width: 575px) {
+
+    /* intro */
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .intro__suptitle {
+        font-size: 22px;
+    }
 }
