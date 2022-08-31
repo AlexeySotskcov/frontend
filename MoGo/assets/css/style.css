@@ -421,6 +421,7 @@ h6 {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 hr {
@@ -434,11 +435,14 @@ hr {
 }
 
 .service__item {
-    flex: 1 1 0;
+    width: 33.3333%;
     position: relative;
+    padding: 0 30px 30px 90px;
+    margin-bottom: 40px;
+}
 
-    padding-left: 90px;
-    padding-right: 30px;
+.service__item--border {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .service__title {
@@ -471,6 +475,8 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item--iphone {
@@ -1230,6 +1236,17 @@ hr {
     .stat__item:last-child {
         border-right: 0;
     }
+
+    /* services */
+    .service__item {
+        width: 50%;
+        padding-bottom: 0;
+    }
+
+    .service__item--border {
+        border-bottom: 0;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1251,6 +1268,10 @@ hr {
     /* section */
     .section {
         padding: 40px 0;
+    }
+
+    .section--devices {
+        padding-bottom: 0;
     }
 
     /* slider */
@@ -1277,6 +1298,22 @@ hr {
     .card__item:last-child {
         margin-bottom: 0;
     }
+
+    /* services */
+    .services {
+        justify-content: center;
+    }
+
+    .service__item {
+        width: 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+    .service__icon {
+        left: 0px;
+    }
+
 }
 
 @media (max-width: 575px) {
@@ -1324,4 +1361,15 @@ hr {
     .stat__count {
         font-size: 52px;
     }
+
+    /* devices */
+    .devices {
+        max-width: 320px;
+    }
+
+    .devices__item--iphone {
+        width: 180px;
+        bottom: -70px;
+    }
+
 }
