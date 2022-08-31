@@ -389,6 +389,7 @@ h6 {
 
 .stat {
     display: flex;
+    flex-wrap: wrap;
     padding: 70px 25px;
 }
 
@@ -1211,6 +1212,24 @@ hr {
     .intro__suptitle {
         font-size: 50px;
     }
+
+    /* stat */
+    .stat {
+        justify-content: center;
+    }
+
+    .stat__item {
+        flex: none;
+        width: 33.3333%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        border: 0;
+    }
+
+    .stat__item:last-child {
+        border-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1286,5 +1305,23 @@ hr {
 
     .section__title:after {
         margin: 20px auto;
+    }
+
+    /* stat */
+    .stat__item {
+        flex: none;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        border-bottom: 1px solid #b5eae0;
+    }
+
+    .stat__item:last-child {
+        border-bottom: 0;
+    }
+
+    .stat__count {
+        font-size: 52px;
     }
 }
