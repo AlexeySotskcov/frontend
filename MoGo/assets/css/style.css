@@ -1287,6 +1287,21 @@ hr {
     .reviews__item{
         padding-left: 175px;
     }
+
+    /* clients */
+    .clients {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .clients__item {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .clients__item:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1481,5 +1496,20 @@ hr {
     /* works */
     .works__col {
         width: 100%;
+    }
+
+    /* clients */
+    .clients__photo {
+        position: static;
+    }
+
+    .clients__item {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .clients__prof:after {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
