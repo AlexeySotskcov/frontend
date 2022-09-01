@@ -775,7 +775,7 @@ hr {
 
 .works__img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     transition: opacity .2s linear;
 }
@@ -1369,6 +1369,10 @@ hr {
         margin: 0 auto 20px;
     }
 
+    .reviews__photo--circled {
+        transform: translate3d(0, -30%, 0);
+    }
+
     .reviews__item {
         padding-left: 0;
     }
@@ -1379,6 +1383,16 @@ hr {
 
     .reviews__item {
         font-style: 20px;
+    }
+
+    /* works */
+    .works {
+        flex-wrap: wrap;
+    }
+
+    .works__col {
+        flex: none;
+        width: 50%;
     }
 }
 
@@ -1443,6 +1457,10 @@ hr {
         padding: 0;
     }
 
+    .reviews__photo--circled {
+        transform: translate3d(0, 0, 0);
+    }
+
     .reviews__btn {
         top: 18%;
     }
@@ -1458,5 +1476,10 @@ hr {
 
     .logos__img {
         margin: 0 auto 20px;
+    }
+
+    /* works */
+    .works__col {
+        width: 100%;
     }
 }
