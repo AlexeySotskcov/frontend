@@ -489,10 +489,19 @@ hr {
 /* whatwedo */
 .whatwedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .whatwedo__item {
     width: 50%;
+    padding: 0 15px;
+}
+
+.whatwedo__img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* accordion */
@@ -1314,6 +1323,14 @@ hr {
         left: 0px;
     }
 
+    /* whatwedo */
+    .whatwedo__img {
+        display: none;
+    }
+
+    .whatwedo__item {
+        width: 100%;
+    }
 }
 
 @media (max-width: 575px) {
