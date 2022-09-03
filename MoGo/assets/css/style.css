@@ -43,6 +43,8 @@ h6 {
     flex-direction: column;
     justify-content: center;
 
+    min-height: 820px;
+    position: relative;
     width: 100%;
     /* height - full screen size */
     height: 100vh;
@@ -95,6 +97,22 @@ h6 {
     right: 0;
 
     z-index: 1000;
+}
+
+.header.active {
+    background-color: #ea8684;
+}
+
+.header--fixed {
+    padding: 10px 0;
+    background-color: #ea8684;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    transform: translate3d(0, 0, 0);
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
 }
 
 .header__inner {
@@ -163,6 +181,85 @@ h6 {
 .nav__link:hover:after,
 .nav__link.active:after {
     opacity: 1;
+}
+
+/* nav toggle */
+.nav-toggle {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    width: 30px;
+
+    padding: 10px 0;
+
+    display: none;
+
+    cursor: pointer;
+}
+
+.nav-toggle.active .nav-toggle__item {
+    background: none;
+}
+
+.nav-toggle__item {
+    display: block;
+    max-width: 100%;
+    height: 3px;
+
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    transition: background .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item:before{
+    /* transform-origin: left top; */
+    transform: rotate(45deg);
+
+    transition: transform .2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+    /* transform-origin: left bottom; */
+    transform: rotate(-45deg);
+
+    transition: transform .2s linear;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-toggle__item:before {
+    top: -8px;
+}
+
+.nav-toggle__item:after {
+    bottom: -8px;
+}
+
+
+.nav-toggle.active .nav-toggle__item:before {
+    top: 0;
+}
+
+.nav-toggle.active .nav-toggle__item:after {
+    bottom: 0;
 }
 
 /* button */
@@ -1343,6 +1440,10 @@ hr {
 @media (max-width: 768px) {
 
     /* intro */
+    .intro {
+        min-height: 650px;
+    }
+
     .intro__title {
         font-size: 70px;
     }
@@ -1354,6 +1455,23 @@ hr {
     /* navigation */
     .nav {
         display: none;
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: #ea8684;
+    }
+
+    .nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 15px;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     /* section */
@@ -1479,6 +1597,10 @@ hr {
 @media (max-width: 575px) {
 
     /* intro */
+    .intro {
+        min-height: 560px;
+    }
+
     .intro__title {
         font-size: 40px;
     }
