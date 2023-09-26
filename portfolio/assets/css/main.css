@@ -21,6 +21,9 @@ body {
     left: 0;
     right: 0;
 
+    overflow: hidden;
+    position: fixed;
+
     z-index: 1000;
 }
 
