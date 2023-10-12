@@ -274,6 +274,11 @@ body {
 }
 
 .service__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
 }
 
 .service__img img {
